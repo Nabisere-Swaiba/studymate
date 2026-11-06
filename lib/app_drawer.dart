@@ -1,6 +1,4 @@
-// OWNER: Member 5
-// PLACEHOLDER: replace with the Sidebar menu from Figma.
-// Keep the class name AppDrawer and the constructor AppDrawer(onSelect: ...).
+
 import 'package:flutter/material.dart';
 
 import 'services/auth_service.dart';
