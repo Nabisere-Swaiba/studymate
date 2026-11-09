@@ -154,7 +154,7 @@ class _AddSessionScreenState extends State<AddSessionScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            'YOUR NEXT Swaiba DATE',
+            'YOUR NEXT SCHEDULED DATE',
             style: TextStyle(
               fontSize: 10,
               letterSpacing: 0.5,

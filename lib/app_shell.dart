@@ -21,18 +21,29 @@ class _AppShellState extends State<AppShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: AppDrawer(onSelect: (i) => setState(() => _index = i)),
-      body: SafeArea(child: IndexedStack(index: _index, children: _tabs)),
+      drawer: AppDrawer(
+        selectedIndex: _index,
+        onSelect: (i) => setState(() => _index = i),
+      ),
+      body: SafeArea(
+        child: IndexedStack(index: _index, children: _tabs),
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
         onDestinationSelected: (i) => setState(() => _index = i),
         destinations: const [
           NavigationDestination(
-              icon: Icon(Icons.groups_outlined), label: 'Groups'),
+            icon: Icon(Icons.groups_outlined),
+            label: 'Groups',
+          ),
           NavigationDestination(
-              icon: Icon(Icons.event_outlined), label: 'Sessions'),
+            icon: Icon(Icons.event_outlined),
+            label: 'Sessions',
+          ),
           NavigationDestination(
-              icon: Icon(Icons.person_outline), label: 'Profile'),
+            icon: Icon(Icons.person_outline),
+            label: 'Profile',
+          ),
         ],
       ),
     );
